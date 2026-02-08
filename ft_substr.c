@@ -6,7 +6,7 @@
 /*   By: gugascon <gugascong@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 11:22:14 by gugascon          #+#    #+#             */
-/*   Updated: 2026/02/07 11:49:21 by gugascon         ###   ########.fr       */
+/*   Updated: 2026/02/07 22:41:09 by gugascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ptr = (char *)malloc(sizeof(char) * (finish_len + 1));
 	if (!ptr)
 		return (NULL);
-	ft_memcpy(ptr, s + start, finish_len + 1);
+	ft_strlcpy(ptr, s + start, finish_len + 1);
 	return (ptr);
 }

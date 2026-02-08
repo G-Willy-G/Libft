@@ -6,15 +6,15 @@
 /*   By: gugascon <gugascong@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 13:24:14 by gugascon          #+#    #+#             */
-/*   Updated: 2026/01/25 13:25:20 by gugascon         ###   ########.fr       */
+/*   Updated: 2026/02/07 19:57:18 by gugascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	tolower(int c)
+int	ft_tolower(int c)
 {
-	if (c <= 'A' && c >= 'Z')
+	if (c >= 'A' && c <= 'Z')
 		return (c + 32);
 	return (c);
 }

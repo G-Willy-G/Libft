@@ -6,11 +6,11 @@
 /*   By: gugascon <gugascong@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 13:46:56 by gugascon          #+#    #+#             */
-/*   Updated: 2026/01/21 11:35:38 by gugascon         ###   ########.fr       */
+/*   Updated: 2026/02/07 19:48:26 by gugascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libc.h"
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

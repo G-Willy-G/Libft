@@ -6,7 +6,7 @@
 /*   By: gugascon <gugascong@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 20:04:37 by gugascon          #+#    #+#             */
-/*   Updated: 2026/02/06 20:40:36 by gugascon         ###   ########.fr       */
+/*   Updated: 2026/02/07 20:14:05 by gugascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,9 @@ int	ft_atoi(const char *str)
 		++i;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
+	{
 		result = result * 10 + (str[i] - '0');
+		i++;
+	}
 	return (result * sign);
 }

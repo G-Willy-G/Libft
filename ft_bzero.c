@@ -6,7 +6,7 @@
 /*   By: gugascon <gugascong@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 18:41:09 by gugascon          #+#    #+#             */
-/*   Updated: 2026/02/06 19:58:53 by gugascon         ###   ########.fr       */
+/*   Updated: 2026/02/07 19:53:44 by gugascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,10 @@ void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*ptr;
 
-	ptr = s;
-	while (s && n > 0)
+	if (!s)
+		return ;
+	ptr = (unsigned char *)s;
+	while (n > 0)
 	{
 		*ptr = 0;
 		ptr++;

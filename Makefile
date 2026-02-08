@@ -3,8 +3,8 @@ NAME = libft.a
 
 CC = gcc # Compilador a usar
 CFLAGS = -Wall -Wextra -Werror # Flags de Compilación
-DELETE = rm -rf # Elimina todas las carpetas de forma recursiva y forzada
-ARCHIVER = ar rcs #ar (archiver), r (remplaza archivos existentes en la libreria), c (crea la libreria si no existe), (crea un íntide, tabla de simbolos, para que funcione mas rapido)
+RM = rm -rf # Elimina todas las carpetas de forma recursiva y forzada
+AR = ar rcs #ar (archiver), r (remplaza archivos existentes en la libreria), c (crea la libreria si no existe), (crea un íntide, tabla de simbolos, para que funcione mas rapido)
 
 SRCS = ft_isalpha.c \
         ft_isdigit.c \
@@ -59,15 +59,15 @@ $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
 %.o: %.c # Regla de Compilacion, si en el anterior paso faltaba algun objeto
-	$(CC) $(CFLAGS) -c $< -o $@ # $< busca primera depedencia, $@ target de la regla, en su caso el objeto. -C solo compila, -O nombre output 
-
+	$(CC) $(CFLAGS) -c $< -o $@
+# $< busca primera depedencia, $@ target de la regla, en su caso el objeto. -C solo compila, -O nombre output 
 # Limpieza
 clean:
-	$(DELETE) $(OBJS) #Borra los objetos creados.
+	$(RM) $(OBJS)
 
 #Reconstrucción
-ft_clean: clean #Primero ejecuta clean
-	$(RM) $(NAME) # Borra libft.a, deja todo limpio
+fclean: clean #Primero ejecuta clean
+	$(RM) $(NAME)
 
 re: fclean all #ejecuta ft_clean y all (vuelve a compilar)
 
