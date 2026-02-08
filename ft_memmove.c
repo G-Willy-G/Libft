@@ -6,7 +6,7 @@
 /*   By: gugascon <gugascong@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 12:02:55 by gugascon          #+#    #+#             */
-/*   Updated: 2026/01/17 13:56:51 by gugascon         ###   ########.fr       */
+/*   Updated: 2026/02/08 18:54:55 by gugascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,15 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 		return (NULL);
 	if (dst <= src)
 	{
-		while (n-- > 0)
-		{
+		while (n--)
 			*d++ = *s++;
-		}
 	}
 	else
 	{
-		while (n-- > 0)
-		{
-			d[n] = s[n];
-		}
+		d += n;
+		s += n;
+		while (n--)
+			*--d = *--s;
 	}
 	return (dst);
 }

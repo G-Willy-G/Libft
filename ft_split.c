@@ -6,7 +6,7 @@
 /*   By: gugascon <gugascong@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 22:44:59 by gugascon          #+#    #+#             */
-/*   Updated: 2026/02/08 11:59:23 by gugascon         ###   ########.fr       */
+/*   Updated: 2026/02/08 18:40:01 by gugascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,14 +77,14 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	words_count = ft_count(s, c);
 	result = (char **)malloc(sizeof(char *) * (words_count + 1));
-	if (!s)
+	if (!result)
 		return (NULL);
 	i = 0;
 	cursor = 0;
 	while (i < words_count)
 	{
 		result[i] = ft_save (s, c, &cursor);
-		if (!result)
+		if (!result[i])
 		{
 			ft_free (result, i);
 			return (NULL);
